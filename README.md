@@ -46,7 +46,9 @@ for file_name in file_list :
  
 
     extracted_text = pytesseract.image_to_string(save_path, lang='KOR+ENG', 
-                                                  config=r'-c preserve_interword_spaces=1 --psm 3 --oem 3 -l kor+eng --tessdata-dir "C:/Program Files/Tesseract-OCR/tessdata"')
+                                                  config=r'-c preserve_interword_spaces=1 --psm 3
+                                                    --oem 3 -l kor+eng --tessdata-dir
+                                                    "C:/Program Files/Tesseract-OCR/tessdata"')
     
     result.write(extracted_text + '\n')
 
@@ -75,7 +77,8 @@ def mouse_handler(event, x, y, flags, param):
         src.append([x, y])
 
         for xx, yy in src:
-            cv2.circle(img, center=(xx, yy), radius=5, color=(0, 255, 0), thickness=-1, lineType=cv2.LINE_AA)
+            cv2.circle(img, center=(xx, yy), radius=5, color=(0, 255, 0), thickness=-1,
+                        lineType=cv2.LINE_AA)
 
         cv2.imshow('img', img)
 
