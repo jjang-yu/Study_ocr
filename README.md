@@ -46,7 +46,8 @@ for file_name in file_list :
  
 
     extracted_text = pytesseract.image_to_string(save_path, lang='KOR+ENG', 
-                                                  config=r'-c preserve_interword_spaces=1 --psm 3 --oem 3 -l kor+eng --tessdata-dir"C:/Program Files/Tesseract-OCR/tessdata"')
+                                                  config=r'-c preserve_interword_spaces=1 --psm 3 --oem 3 -l kor+eng
+                                                            --tessdata-dir"C:/Program Files/Tesseract-OCR/tessdata"')
     
     result.write(extracted_text + '\n')
 
