@@ -6,6 +6,7 @@ google colab(easyocr), vscode(tesseract)
 ### 설명 
 
 vscode에서 tesseract를 활용하여 이미지를 불러와 변환을 주고 텍스츠로 추출.
+
 변환 시킨 이미지를 스캔 후 colab에서 실행하였다.
 
 ⬇ tesseract ocr 코드
